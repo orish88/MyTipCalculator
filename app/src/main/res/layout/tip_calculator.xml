@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/llBillAmount"
+        android:layout_height="60dp" android:layout_width="match_parent"
+        android:orientation="horizontal" android:layout_marginLeft="15dp"
+        >
+        <TextView
+            android:id="@+id/tvBillAmount"
+            android:textSize="@dimen/tipCalcHeadlineTextSize"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bill Amount:"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etBillAmount"
+            android:layout_marginTop="20dp"
+            android:layout_width="198dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+             />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/cbRound"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@id/llBillAmount"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Round to the nearest dollar"
+        android:textSize="@dimen/tipCalcTextSize"
+         />
+
+    <Button
+        android:id="@+id/btCalculate"
+        android:layout_alignLeft="@id/cbRound"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:textSize="@dimen/tipCalcTextSize"
+        android:textStyle="bold"
+        android:layout_below="@+id/cbRound" />
+    <TextView
+        android:id="@+id/tvTipResult"
+        android:layout_marginTop="30dp"
+        android:layout_alignLeft="@id/llBillAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tip:"
+        android:textSize="@dimen/tipCalcTextSize"
+        android:layout_below="@+id/btCalculate"
+        android:layout_alignRight="@+id/cbRound"
+        android:layout_alignEnd="@+id/cbRound" />
+
+</RelativeLayout>
